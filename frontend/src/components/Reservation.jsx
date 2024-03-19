@@ -19,7 +19,7 @@ const Reservation = () => {
         try {
             const { data } = await axios.post(
                 "http://localhost:3001/api/v1/reservation/send",
-                { FirstName, lastName, email, phone, date, time },
+                { firstName, lastName, email, phone, date, time },
                 {
                     headers: {
                         "content-type": "application/json"
@@ -39,7 +39,7 @@ const Reservation = () => {
 
 
         } catch (error) {
-            toast.error(error.response.data.message)
+            toast.error(error.response.data.message);
 
         }
     };
@@ -55,15 +55,14 @@ const Reservation = () => {
                         <p>For Further Questiions, Please Contact</p>
                         <form >
                             <div>
-                                <input type="text" placeholder='First Name' value={firstName} onchange={(e => setFirstName(e.target.value))} />
-                            </div>
+                                <input type="text" placeholder='First Name' value={firstName} onChange={(e) => setFirstName(e.target.value)} />
 
+                                <input type="text" placeholder='Last Name' value={lastName} onChange={(e) => setLastName(e.target.value)} />
+                            </div>
                             <div>
-                                <input type="text" placeholder='Last Name' value={lastName} onchange={(e => setLastName(e.target.value))} />
+                                <input type="date" placeholder='Date' value={date} onChange={(e) => setDate(e.target.value)} />
+                                <input type="time" placeholder='Time' value={time} onChange={(e) => setTime(e.target.value)} />
                             </div>
-                            <input type="date" placeholder='Date' value={date} onChange={(e) => setDate(e.target.value)} />
-                            <input type="time" placeholder='Time' value={time} onChange={(e) => setTime(e.target.value)} />
-
                             <div>
                                 <input type="email" placeholder='Email'
                                     value={email}
