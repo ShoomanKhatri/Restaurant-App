@@ -12,7 +12,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/success' element={<Success />} />
-      <Route path='/' element={<NotFound />} />
+      <Route path='*' element={<NotFound />} />
     </Routes>
     <Toaster />
   </Router>

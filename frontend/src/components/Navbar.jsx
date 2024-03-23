@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { data } from '../restApi.json';
 
-function Navbar() {
+const Navbar = () => {
     const [show, setShow] = useState(false);
     return (
         <nav>

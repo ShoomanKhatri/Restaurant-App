@@ -69,7 +69,8 @@ nav .navLinks .links a {
 
 nav .navLinks .links a:hover {
   color: #222;
-  transition: 0.3s;
+  /* width: 10px; */
+  transition: width 0.8s ease-in-out;
   cursor: pointer;
 }
 
@@ -659,7 +660,7 @@ nav svg {
   left: 25px;
   padding: 8px 20px;
   color: #fff;
-  background: linear-gradient(186deg, black, #7e7a7a8a);
+  background: linear-gradient(186deg, rgb(12, 201, 75), #7e7a7a8a);
   border: none;
   border-radius: 20px;
   font-size: 16px;
