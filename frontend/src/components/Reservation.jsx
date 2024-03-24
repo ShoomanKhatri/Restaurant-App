@@ -56,22 +56,22 @@ const Reservation = () => {
                         <p>For Further Questiions, Please Contact</p>
                         <form >
                             <div>
-                                <input type="text" placeholder='First Name' value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+                                <input required type="text" placeholder='First Name' value={firstName} onChange={(e) => setFirstName(e.target.value)} />
 
-                                <input type="text" placeholder='Last Name' value={lastName} onChange={(e) => setLastName(e.target.value)} />
+                                <input required type="text" placeholder='Last Name' value={lastName} onChange={(e) => setLastName(e.target.value)} />
                             </div>
                             <div>
-                                <input type="date" placeholder='Date' value={date} onChange={(e) => setDate(e.target.value)} />
-                                <input type="time" placeholder='Time' value={time} onChange={(e) => setTime(e.target.value)} />
+                                <input required type="date" placeholder='Date' value={date} onChange={(e) => setDate(e.target.value)} />
+                                <input required type="time" placeholder='Time' value={time} onChange={(e) => setTime(e.target.value)} />
                             </div>
                             <div>
-                                <input type="email" placeholder='Email'
+                                <input required type="email" placeholder='Email'
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     className='email_tag'
                                 />
 
-                                <input type="number" placeholder='Phone'
+                                <input required type="number" placeholder='Phone'
                                     value={phone}
                                     onChange={(e) => setPhone(e.target.value)}
                                 />
