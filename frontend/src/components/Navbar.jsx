@@ -26,7 +26,9 @@ const Navbar = () => {
                         })
                     }
                 </div>
-                <button className="menuBtn">OUR MENU</button>
+                <Link to="menu" spy={true} smooth={true} duration={500}>
+                    <button className="menuBtn">OUR MENU</button>
+                </Link>
             </div>
             <div className="hamburger" onClick={() => setShow(!show)}>
                 <GiHamburgerMenu />

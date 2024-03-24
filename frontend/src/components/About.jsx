@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 
 const About = () => {
@@ -14,7 +14,7 @@ const About = () => {
                     <p className="mid">
                         Welcome to Restro! Where every dish is a masterpiece, and every visit is a celebration. Join us for unforgettable flavors and exceptional hospitality. Come hungry, leave happy!
                     </p>
-                    <Link to={"/"}>Explore Menu
+                    <Link to="menu" spy={true} smooth={true} duration={500}>Explore Menu
                         <span>
                             <HiOutlineArrowNarrowRight />
                         </span>

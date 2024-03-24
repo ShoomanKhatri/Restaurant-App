@@ -22,7 +22,7 @@ const Footer = () => {
             <p>Developed By SHOOMAN</p>
           </div>
           <div className="right">
-            <p> <span><FaRegCopyright /></span> {getFullYear()}All Rights Reserved.</p>
+            <p> <span><FaRegCopyright /></span> {getCurrentYear()} &nbsp;All Rights Reserved.</p>
           </div>
         </div>
       </div>
