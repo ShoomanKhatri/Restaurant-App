@@ -1,7 +1,7 @@
 import React from 'react';
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import axios from 'axios';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ const Reservation = () => {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
-    const [date, setDate] = useState("");
+    const [date, setDate] = useState("Date");
     const [time, setTime] = useState("");
     const [phone, setPhone] = useState();
     const navigate = useNavigate();
@@ -44,6 +44,7 @@ const Reservation = () => {
 
         }
     };
+    // const ref = useRef("");
     return (
         <section className="reservation" id='reservation'>
             <div className="container">
@@ -61,9 +62,18 @@ const Reservation = () => {
                                 <input required type="text" placeholder='Last Name' value={lastName} onChange={(e) => setLastName(e.target.value)} />
                             </div>
                             <div>
+
                                 <input required type="date"
-                                    placeholder='Date' value={date} onChange={(e) => setDate(e.target.value)} />
-                                <input required type="time" placeholder='Time' value={time} onChange={(e) => setTime(e.target.value)} />
+                                    placeholder='Date' value={date} onChange={(e) => setDate(e.target.value)}
+
+                                />
+                                <input required type="time" placeholder='Time' value={time} onChange={(e) => setTime(e.target.value)}
+                                />
+
+                                {/* May use for date placeholdere in future */}
+                                {/* ref={ref}
+                                onFocus={() => (ref.current.type = "date")}
+                                onBlur={() => (ref.current.type = "date")} */}
                             </div>
                             <div>
                                 <input required type="email" placeholder='Email'
