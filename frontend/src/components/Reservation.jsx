@@ -53,7 +53,7 @@ const Reservation = () => {
                 <div className="banner">
                     <div className="reservation_form_box">
                         <h1>MAKE A RESERVATION</h1>
-                        <p>For Further Questiions, Please Contact</p>
+                        <p>For Further Questions, Please Contact</p>
                         <form >
                             <div>
                                 <input required type="text" placeholder='First Name' value={firstName} onChange={(e) => setFirstName(e.target.value)} />
@@ -61,7 +61,8 @@ const Reservation = () => {
                                 <input required type="text" placeholder='Last Name' value={lastName} onChange={(e) => setLastName(e.target.value)} />
                             </div>
                             <div>
-                                <input required type="date" placeholder='Date' value={date} onChange={(e) => setDate(e.target.value)} />
+                                <input required type="date"
+                                    placeholder='Date' value={date} onChange={(e) => setDate(e.target.value)} />
                                 <input required type="time" placeholder='Time' value={time} onChange={(e) => setTime(e.target.value)} />
                             </div>
                             <div>
